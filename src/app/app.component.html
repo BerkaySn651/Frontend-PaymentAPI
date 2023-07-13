@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+  <title>Ödeme Formu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      max-width: 400px;
+      max-height: 100%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+      margin-top: 39px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    input[type="text"], input[type="email"], input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Ödeme Formu</h2>
+    <form>
+      <div class="form-group">
+        <label for="card-name">Kart Üzerindeki İsim:</label>
+        <input type="text" id="card-name" name="card-name" required>
+      </div>
+      <div class="form-group">
+        <label for="tel-no">Telefon Nmarası:</label>
+        <input type="text" maxlength="11" id="tel-no" name="tel-no" required>
+      </div>
+      <div class="form-group">
+        <label for="card-number">Kart Numarası:</label>
+        <input type="text" maxlength="16" id="card-number" name="card-number" required>
+      </div>
+      <div class="form-group">
+        <label for="expiry-Date">Son Kullanma Tarihi:</label>
+        <input type="text" id="expiry-Date" maxlength="4" name="expiry-Date" placeholder="AA/YY" required>
+      </div>
+      <div class="form-group">
+        <label for="cvv">CVV:</label>
+        <input type="text" maxlength="3" id="cvv" name="cvv" required>
+      </div>
+      <div class="form-group">
+        <label for="email">E-posta Adresi:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Ödemeyi Tamamla">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
